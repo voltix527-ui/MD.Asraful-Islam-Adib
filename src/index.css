@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #080a12;
+    --bg-secondary: #101426;
+    --accent-blue: #1677ff;
+    --accent-purple: #873bff;
+    --text-primary: #f5f7ff;
+    --text-muted: #a0a8bc;
+  }
+
+  html {
+    background-color: #080a12;
+    color: #f5f7ff;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #080a12;
+    color: #f5f7ff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Outfit", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono-tabular {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080a12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a213d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1677ff;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #1677ff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
